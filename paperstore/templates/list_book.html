@@ -1,0 +1,25 @@
+{% extends 'templates/base.html' %}
+{% block content %}
+<h2>Books</h2>
+<a href="{% url 'add_book' %}" class="btn btn-primary mb-3">Add Book</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Published Date</th>
+        <th>Author</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.genre }}</td>
+        <td>{{ book.published_date }}</td>
+        <td>{{ book.author.name }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="4">No books found.</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

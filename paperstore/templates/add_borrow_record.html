@@ -1,0 +1,9 @@
+{% extends 'temolates/base.html' %}
+{% block content %}
+<h2>Add Borrow Record</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Add Record</button>
+</form>
+{% endblock %}
