@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2>Borrow Records</h2>
-<a href="{% url 'add_borrow_record' %}" class="btn btn-primary mb-3">Add Borrow Record</a>
+<a href="{% url 'add_borrow' %}" class="btn btn-primary mb-3">Add Borrow Record</a>
 <table class="table table-bordered">
     <tr>
         <th>User Name</th>
@@ -9,7 +9,7 @@
         <th>Borrow Date</th>
         <th>Return Date</th>
     </tr>
-    {% for record in borrow_records %}
+    {% for record in borrow %}
     <tr>
         <td>{{ record.user_name }}</td>
         <td>{{ record.book.title }}</td>

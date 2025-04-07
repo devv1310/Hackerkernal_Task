@@ -22,7 +22,7 @@ class BookListView(ListView):
 class BorrowRecordListView(ListView):
     model = BorrowRecord
     template_name = 'list_borrow.html'
-    context_object_name = 'borrow_records'
+    context_object_name = 'borrow'
     paginate_by = 10
 
 

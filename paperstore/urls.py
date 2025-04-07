@@ -4,7 +4,7 @@ from .views import *
 urlpatterns = [
     path('author/', AuthorListView.as_view(), name='list_author'),
     path('book/', BookListView.as_view(), name='list_book'),
-    path('borrow-records/', BorrowRecordListView.as_view(), name='list_borrow'),
+    path('borrow/', BorrowRecordListView.as_view(), name='list_borrow'),
     path('add-author/', AuthorCreateView.as_view(), name='add_author'),
     path('add-book/', BookCreateView.as_view(), name='add_book'),
     path('add-borrow/', BorrowRecordCreateView.as_view(), name='add_borrow'),
